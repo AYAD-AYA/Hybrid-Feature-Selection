@@ -53,8 +53,8 @@ print("all")
 
 Category=file['Category']
 print(Category)
-# selected_features = proposed_fs_model(file,'attack',10)
-selected_features=['saddr', 'flgs', 'dur', 'dport', 'stime', 'TnP_PerProto', 'N_IN_Conn_P_DstIP', 'stddev', 'TnBPSrcIP', 'sport', 'attack', 'proto', 'TnP_PDstIP', 'daddr', 'bytes', 'seq']
+selected_features = proposed_fs_model(file,'attack',10)
+# selected_features=['saddr', 'flgs', 'dur', 'dport', 'stime', 'TnP_PerProto', 'N_IN_Conn_P_DstIP', 'stddev', 'TnBPSrcIP', 'sport', 'attack', 'proto', 'TnP_PDstIP', 'daddr', 'bytes', 'seq']
 if 'Category' not in selected_features:
     selected_features.append('Category')
 for i in file:
