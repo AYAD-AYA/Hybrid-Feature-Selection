@@ -23,7 +23,7 @@ from features_selection import proposed_fs_model
 
 
 
-# Merged 4 files of dataset into one named "merged" and run it one time in the any file and then comment it
+# Merged 4 files of the dataset into one named "merged" and ran it one time in any file and then commented it
 # path = "E:\Datasets\iotbotnet\Entiredataset"
 # allfiles = glob.glob(os.path.join(path, "*.csv"))
 # all_csv = (pd.read_csv(f, sep=",") for f in allfiles)
@@ -54,7 +54,6 @@ print("all")
 Category=file['Category']
 print(Category)
 selected_features = proposed_fs_model(file,'attack',10)
-# selected_features=['saddr', 'flgs', 'dur', 'dport', 'stime', 'TnP_PerProto', 'N_IN_Conn_P_DstIP', 'stddev', 'TnBPSrcIP', 'sport', 'attack', 'proto', 'TnP_PDstIP', 'daddr', 'bytes', 'seq']
 if 'Category' not in selected_features:
     selected_features.append('Category')
 for i in file:
@@ -66,9 +65,8 @@ print("f")
 print(file.columns)
 
 
-
-# i insert to specific task in the second level, that i want take the row detected
-# as an attack with this seq, and i want to it with integer number and only in the first column
+# I insert this to a specific task in the second level, that I won't take the row detected
+# as an attack with this seq, and I want to it with integer number and only in the first column
 file.insert(0,'seq.ID',file.index)
 print("seq")
 
